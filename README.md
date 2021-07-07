@@ -1,24 +1,8 @@
-# README
+# FastCommand Engine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img src="https://img.shields.io/badge/LinkedIn-cameron--mackintosh-informational?style=for-the-badge&labelColor=black&logo=linkedin&logoColor=0077b5&&color=0FBBD6"/>
+<img src="https://img.shields.io/badge/Github-cbmackintosh-informational?style=for-the-badge&labelColor=black&logo=github&color=8B0BD5"/>
 
-Things you may want to cover:
+## Abastract
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is the backend application that powers FastCommand, an application that helps first responders manage wildfires and other large-scale emergencies according to the Incident Command System. The repository for the frontend application can be found <a href="https://github.com/cbmackintosh/fast-command">HERE.</a>
