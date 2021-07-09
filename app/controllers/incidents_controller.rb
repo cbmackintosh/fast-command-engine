@@ -1,10 +1,24 @@
 class IncidentsController < ApplicationController
 
+  def show
+    @incident = Incident.find(params[:id])
+   if @incident
+      render json: {
+        incident: @incident
+      }
+    else
+      render json: {
+        status: 500,
+        errors: ['incident not found']
+      }
+    end
+  end
+
   def index
     @incidents = Incident.filter_by_user(params[:user_id]) if params[:user_id].present?
     if @incidents
       render json: {
-        incident: @incidents
+        incidents: @incidents
       }
     else
       render json: {
