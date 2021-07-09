@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     else
       render json: {
         status: 500,
-        errors: ['post not found 1']
+        errors: ['Could not find a post with that id']
       }
     end
   end
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     else
       render json: {
         status: 500,
-        errors: ['post not found 2']
+        errors: ['No posts found for that incident']
       }
     end
   end
