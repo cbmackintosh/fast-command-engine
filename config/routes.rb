@@ -9,8 +9,13 @@ Rails.application.routes.draw do
   get '/posts', to: 'posts#index'
   get '/posts/:id', to: 'posts#show'
   post '/posts', to: 'posts#create'
+
+  get '/contacts', to: 'contacts#index'
+  get '/contacts/:id', to: 'contacts#show'
+  post '/contacts', to: 'contacts#create'
   
   resources :users, only: [:create, :show, :index]
   resources :incidents, only: [:create, :show, :index]
   resources :posts, only: [:create, :destroy]
+  resources :contacts, only: [:create, :show, :index]
 end
