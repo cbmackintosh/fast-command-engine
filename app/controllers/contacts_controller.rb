@@ -2,9 +2,9 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
-   if @contact
+    if @contact
       render json: {
-        post: @contact
+        contact: @contact
       }
     else
       render json: {
