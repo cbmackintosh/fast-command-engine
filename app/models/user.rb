@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :incidents
   has_secure_password
   validates :firstname, presence: true
   validates :lastname, presence: true
