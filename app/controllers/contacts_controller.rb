@@ -38,7 +38,7 @@ class ContactsController < ApplicationController
     if @contact.save
       render json: {
         status: :created,
-        post: @contact
+        contact: @contact
       }
     else 
       render json: {
@@ -50,7 +50,7 @@ class ContactsController < ApplicationController
 private
   
   def contact_params
-    params.require(:contact).permit(:name, :jobtitle, :organization, :email, :phone, :type, :incident_id, :user_id, )
+    params.require(:contact).permit(:name, :jobtitle, :organization, :email, :phone, :contact_type, :incident_id, :user_id, :point_of_contact, :point_of_contact_title )
   end
 
 end
