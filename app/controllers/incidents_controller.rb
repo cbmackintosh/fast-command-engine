@@ -1,8 +1,8 @@
 class IncidentsController < ApplicationController
 
   def show
-    @incident = Incident.find(params[:id])
-   if @incident
+    @incident = Incident.find_by slug: params[:id]
+    if @incident
       render json: {
         incident: @incident
       }
