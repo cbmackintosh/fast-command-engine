@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_16_160832) do
+ActiveRecord::Schema.define(version: 2021_07_16_171758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_07_16_160832) do
     t.integer "user_id"
     t.string "incident_type"
     t.string "location"
+    t.datetime "resolved_at"
   end
 
   create_table "posts", force: :cascade do |t|
