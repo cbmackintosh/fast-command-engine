@@ -1,8 +1,8 @@
 class IncidentsController < ApplicationController
 
   def show
-    @incident = Incident.find(params[:id])
-   if @incident
+    @incident = Incident.find_by slug: params[:id]
+    if @incident
       render json: {
         incident: @incident
       }
@@ -45,7 +45,7 @@ class IncidentsController < ApplicationController
 private
   
   def incident_params
-    params.require(:incident).permit(:name, :summary, :user_id)
+    params.require(:incident).permit(:name, :summary, :user_id, :incident_type, :location)
   end
   
 end
