@@ -47,10 +47,27 @@ class ContactsController < ApplicationController
       }
     end
   end
-private
+
+  def update
+    @contact = Contact.find(params[:id])
+    if @contact
+      @contact.update(contact_params)
+      render json: {
+        status: 'updated',
+        contact: @contact
+      }
+    else
+      render json: {
+        status: 500,
+        errors: 'failed to update'
+      }
+    end
+  end
+
+  private
   
   def contact_params
-    params.require(:contact).permit(:name, :jobtitle, :organization, :email, :phone, :contact_type, :incident_id, :user_id, :point_of_contact, :point_of_contact_title )
+    params.require(:contact).permit(:name, :jobtitle, :organization, :email, :phone, :contact_type, :incident_id, :incident_role, :user_id, :point_of_contact, :point_of_contact_title )
   end
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_16_171758) do
+ActiveRecord::Schema.define(version: 2021_07_19_190906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_07_16_171758) do
   create_table "contacts", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "incident_parent"
-    t.string "incident_role"
+    t.integer "incident_role"
     t.string "contact_type"
     t.string "name"
     t.string "jobtitle"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_07_16_171758) do
     t.integer "incident_id"
     t.string "point_of_contact"
     t.string "point_of_contact_title"
+    t.string "incident_title"
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
