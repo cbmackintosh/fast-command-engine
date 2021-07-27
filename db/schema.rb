@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_27_175147) do
+ActiveRecord::Schema.define(version: 2021_07_27_231207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contacts", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "incident_parent"
+    t.bigint "incident_parent"
     t.bigint "incident_role"
     t.string "contact_type"
     t.string "name"
